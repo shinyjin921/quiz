@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/quiz/static/css/main.9fe40aba.css",
-    "main.js": "/quiz/static/js/main.e0574726.js",
-    "static/media/korean traditional pattern to the_904567.png": "/quiz/static/media/korean traditional pattern to the_904567.a98cce251bea2ca1c082.png",
-    "static/media/png": "/quiz/static/media/744d571ff6d5a9ab801693444d8d64e0.f80ac9990715a57d1d6d.png",
-    "index.html": "/quiz/index.html",
-    "main.9fe40aba.css.map": "/quiz/static/css/main.9fe40aba.css.map",
-    "main.e0574726.js.map": "/quiz/static/js/main.e0574726.js.map"
+    "main.css": "/static/css/main.12fc3aa8.css",
+    "main.js": "/static/js/main.420667ab.js",
+    "static/media/korean traditional pattern to the_904567.png": "/static/media/korean traditional pattern to the_904567.a98cce251bea2ca1c082.png",
+    "static/media/png": "/static/media/744d571ff6d5a9ab801693444d8d64e0.63aa6c95a1db08050428.png",
+    "static/media/threed.png": "/static/media/threed.6916b1122415cf423f25.png",
+    "index.html": "/index.html",
+    "main.12fc3aa8.css.map": "/static/css/main.12fc3aa8.css.map",
+    "main.420667ab.js.map": "/static/js/main.420667ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fe40aba.css",
-    "static/js/main.e0574726.js"
+    "static/css/main.12fc3aa8.css",
+    "static/js/main.420667ab.js"
   ]
 }
