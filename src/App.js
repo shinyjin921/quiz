@@ -9,6 +9,7 @@ const App = () => {
   const [filterQuiz,setfilterQuiz] = useState([]);
   const [finish,setFinish] = useState(false);
   const [score,setScore] = useState(0);
+  
   const onSelectCategory = (select)=>{
     setCategory(select);
     //quizData에서 선택한 카테고리의 문제만 새로 만듬.
@@ -44,10 +45,12 @@ const App = () => {
           score={score}
           />
       }
-      <p>APP SCORE:{score}</p>
       {
         finish && 
-        <Results onReStart={handleReStart}/>
+        <Results 
+          onReStart={handleReStart}
+          score={score}
+        />
       }
     </div>
   )

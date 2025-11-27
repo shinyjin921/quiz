@@ -1,4 +1,11 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Yeon+Sung&display=swap');
+
+.yeon-sung-regular {
+  font-family: "Yeon Sung", system-ui;
+  font-style: normal;
+}
+
 *{ margin: 0; padding: 0;}
 a{ text-decoration: none; color: inherit;}
 ol,ul{ list-style: none;}
@@ -14,6 +21,7 @@ ol,ul{ list-style: none;}
 }
 /* app */
 #app{
+  overflow: hidden;
   background-image:url(./images/korean\ traditional\ pattern\ to\ the_904567.png);
   background-size: cover;
   background-position: center;
@@ -21,7 +29,7 @@ ol,ul{ list-style: none;}
   height: 640px;
   border: 1px solid #222;
   border-radius: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,59 +40,115 @@ ol,ul{ list-style: none;}
   }
 }
 #categories{
+  background-image: url(./images/744d571ff6d5a9ab801693444d8d64e0.png);
+  width: 360px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  h2{text-align: center;
-  position:absolute;
-  transform: translateX(-50%);
-  top: 150px;
-  left: 180px;
+  h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
   }
   ul{
-    background-image: url(./images/744d571ff6d5a9ab801693444d8d64e0.png);
-    width: 360px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 330px;
     li{
+      box-shadow: 0px 4px 7px 0px #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 50px;
       cursor: pointer;
       margin: 0.5rem 0;
+      background-color: #FFE1A1;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: bolder;
+      transition: 0.5s;
+      &:hover{
+      background-color: #ffba6b;}
     }
   }
 }
 
 #quiz-page{
   height: 100%;
-  h3{}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   p{ 
     margin-bottom: 1rem;
   }
   p:nth-of-type(1){
-    text-align: center;
-    line-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bolder;
     width: 360px;
-    height: 220px;
+    height: 250px;
     background-image: url(./images/744d571ff6d5a9ab801693444d8d64e0.png);
     background-position: center;
     background-size: cover;
+    font-size: 24px;
+    span{
+      background-color: rgba(255,255,255,0.8);
+    }
   }
   .choices{
     width: 100%;
+    height: 205px;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
     li{
+      cursor: pointer;
       margin-top: 0.5rem;
       padding: 0.4rem;
       border-radius: 1rem;
       box-shadow: 0 2px 6px 0;
       width: 280px;
       background-color: #FFE1A1;
+      transition: 0.5s;
+      &:hover{
+        background-color: #fff4db;
+      }
     }
   }
+  .show{
+    background-color: #FFFCE6;
+    transition: 0.5s;
+    box-shadow: 0px 4px 7px 0px #999;
+  }
+  .noshow{
+    background-color: #EDEBB9;
+    box-shadow: 0px 4px 7px 0px #999;
+  }
+  .indicator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0DCBF;
+    width: 90%;
+    height: 20px;
+    padding: 8px 0;
+    border-radius: 12px;
+    margin-top: 50px;
+    li{
+      width: 60px;
+      height: 15px;
+      margin: 0 6px;
+      border-radius: 24px;
+    }
+  }
+
 }
 
 #result{
@@ -99,17 +163,50 @@ ol,ul{ list-style: none;}
   position: relative;
   p{
     position: absolute;
-    top: 0;
+    top: -20px;
     display: inline-block;
+    font-weight: 400;
+    font-size: 40px;
+  }
+  .score{
+    font-size: 50pt;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
   }
   button{
+    cursor: pointer;
+    z-index: 20;
+    width: 100px;
+    height: 50px;
     position: absolute;
-    top: 300px;
+    top: 330px;
     background-color: #FFE1A1;
-    padding: 0.8rem 0.3rem;
     border-radius: 16px;
+    font-size: 16px;
+    font-weight: bolder;
+    box-shadow: 0px 4px 7px 0px #999;
+    border: 0px;
+    transition: 0.5s;
+    &:hover{
+      background-color: #ffba6b;
+    }
+  }
+  img{
+    position: absolute;
+    width: 300px;
+    bottom: -175px;
+
+  }
+  .left{
+    left: -50px;
+  }
+  .right{
+    width: 200px;
+    right: -30px;
   }
 }
+
 
 @media all and (max-width:360px) {
   #app{

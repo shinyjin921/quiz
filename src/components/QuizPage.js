@@ -16,8 +16,7 @@ const QuizPage = ({quizes,onFinish,onScore,score}) => {
   }
   return (
     <div id="quiz-page">
-      <div>({current+1}/{quizes.length})</div>
-      <p>{quizes[current].question}</p>
+      <p className="yeon-sung-regular"><span>{quizes[current].question}</span></p>
       <ul className="choices">
         {
           quizes[current].choices.map((item,idx)=>{
@@ -27,7 +26,15 @@ const QuizPage = ({quizes,onFinish,onScore,score}) => {
           })
         }
       </ul>
-      <p>Child Score : {score}</p>
+      <ul className="indicator">
+        {
+        quizes.map((item,idx)=>{
+          return (
+            <li className={idx<=current? "show":"noshow"}></li>
+          )
+        })
+        }
+      </ul>
     </div>
   )
 }
